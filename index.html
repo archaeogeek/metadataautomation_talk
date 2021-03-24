@@ -59,7 +59,7 @@
 				</section>
 
 				<section data-background-image="./images/support.jpeg" alt="support" class="full" data-background-size="cover">
-					<p class="box">My passion is enabling others to do their job as easily as possible, preferrably with open source tools.</p>
+					<p class="box" style="margin-top:100px !important">My passion is enabling others to do their job as easily as possible, preferrably with open source tools.</p>
 					<small class="attribution" style="color:black">Pexel CC0</small>
 					<aside class="notes">I'm not a great coder- I like to find and fix little blockers, for example by making documentation easier to follow or teaching people to use GitHub</aside>
 				</section>
@@ -82,8 +82,12 @@
 					<p class="attribution">Flickr: US Census Bureau CC BY-ND 2.0</p>
 				</section>
 
+				<section>
+					<h2>Automation</h2>
+				</section>
+
 				<section data-background-image="./images/ford_production_line.jpg" alt="ford production line" class="full" data-background-size="cover">
-					<h3 class="box" style="margin-top:100px !important">Automation is not a new idea!</h3>
+					<h3 class="box" style="margin-top:100px !important">Not a new idea!</h3>
 					<p class="box">Some metadata elements can be derived from the dataset</p>
 				<p class="attribution">Flickr: The Henry Ford CC BY-NC-SA 2.0</p>
 				<aside class="notes">There are many tools out there that will derive at least some metadata elements for you, including the USGS Metadata Wizard, which has been around for many years</aside>
@@ -96,7 +100,7 @@
 				</section> 
 
 				<section data-background-image="./images/ogrinfo.png" alt="ogrinfo" class="full" data-background-size="cover">
-					<span class="fragment fade-out"><p class="box-right">Most approaches cover the elements that are easy to programatically derive, such as extents, titles, creation or update dates, language</p></span>
+					<span class="fragment fade-out"><p class="box-right">Most approaches cover the elements that are easy to programatically derive, such as extents, titles, creation or update dates, language and so on</p></span>
 					<span class="fragment fade-in"><p class="box-right">But there are other elements that need a human touch, such as human-readable alternative titles, abstracts and keywords that can't be derived in the same way</p></span>
 					<aside class="notes">From personal observation, it's these manual elements that cause the most trouble and cause metadata projects to flounder or sometimes fail all together</aside>
 				</section>
@@ -112,9 +116,13 @@
 				</section>
 
 
+				<section>
+					<h2 class="box">Part One: Metadata Crawler</h2>
+				</h2>
+				</section>
+
 				<section data-background-image="./images/files.jpg" alt="files" class="full" data-background-size="cover">
-					<h3 class="box">Part One: Metadata Crawler</h3>
-					<p class="box-left"><a target="_blank" href="https://github.com/talend-spatial/workspace-metadata-crawler">Crawler</a> is a script for discovering spatial data (vector or raster) in file systems and databases. For each data source it finds, it derives as much of the metadata as it can, or inserts place-holder elements for others.</p>
+					<p class="box"><a target="_blank" href="https://github.com/talend-spatial/workspace-metadata-crawler">Crawler</a> is a script for discovering spatial data (vector or raster) in file systems and databases. For each data source it finds, it derives as much of the metadata as it can, or inserts place-holder elements for others.</p>
 					<p class="attribution">wikimedia.org CC-BY-3.0</p>
 					<aside class="notes">Crawler was created by Titellus, using Talend ETL's spatial plugin It's open source. It can be run as a web service (using tomcat) or as a cross-platform shell script</aside>
 				</section>
@@ -138,7 +146,7 @@
 				</section>
 
 				<section data-background-image="./images/scriptorium.jpg" alt="scribes" class="full" data-background-size="cover">
-					<h3 class="box">Part Two: Ye Olde Approache</h3>
+					<h2 class="box">Part Two: Ye Olde Approache</h2>
 					<p class="attribution">medievalfragments.wordpress.com</p>
 				</section>
 				
@@ -159,7 +167,7 @@
 
 				
 				<section data-background-image="./images/engage_guide.jpg" alt="engage guide" class="full" data-background-size="cover">
-					<h3 class="box" style="margin-top:430px !important">Step Two: The Cool New Experimental Approach</h3>
+					<h3 class="box" style="margin-top:430px !important">Part Two: The Cool New Experimental Approach</h3>
 					<p class="attribution">Flickr: Bernard Duport CC-BY-SA-2.0</p>
 				</section>
 
@@ -223,17 +231,24 @@
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+
 
 		<script>
 
 			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
+			/*Reveal.initialize({
 				controls: false,
 				progress: true,
 				center: true,
 				hash: true,
 				slideNumber: "c/t",
 				showSlideNumber: 'all',
+				showNotes: false,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -243,9 +258,19 @@
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true },
 					{ src: 'plugin/search/search.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/zoom/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
+			});*/
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
 
 		</script>
