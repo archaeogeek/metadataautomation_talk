@@ -43,9 +43,9 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section data-background-image="./images/closerthanyouthink.jpg" alt="robots" class="full" data-background-size="cover">
-					<h2 class="box">Automating Metadata Creation</h2>
-					<h3 class="box">Closer than we think</h3>
-					<p class="box">Jo Cook, Astun Technology</p>
+					<h3 class="box">Automating Metadata Creation</h3>
+					<h4 class="box" style="margin-top:50px !important">Closer than we think</h4>
+					<p class="box" style="margin-top:50px !important">Jo Cook, Astun Technology</p>
 					</p>
 					<p class="attribution" style="color:black">https://paleofuture.com/blog/2015/2/4/42-visions-for-tomorrow-from-the-golden-age-of-futurism</p>
 				</section>
@@ -53,41 +53,42 @@
 				<section>
 					<p >Hello! I'm Jo *waves*. I'm the Technical Evangelist for Data Discovery at Astun Technology.</p>
 					<img class="center" src="./images/teamphoto_2.jpg" alt="team photo" width="800">
-					<p>Astun provide web-based mapping (and related) tools and training in the UK, based on the open source geospatial stack.</p>
+					<p>http://astuntechnology.com | @astuntech</p>
 				</span>
-					<aside class="notes">The job title is just a fancy way of saying that I help people find and share data. By the way, this image was taken pre-pandemic when it was OK to stand so close together, and indeed to get haircuts.</aside>
+					<aside class="notes">The job title is just a fancy way of saying that I help people find and share data. By the way, this image was taken pre-pandemic when it was OK to stand so close together, and indeed to get haircuts. Astun provide web-based mapping (and related) tools and training in the UK, based on the open source geospatial stack.</aside>
 				</section>
 
 				<section data-background-image="./images/support.jpeg" alt="support" class="full" data-background-size="cover">
-					<p class="box" style="margin-top:100px !important">My passion is enabling others to do their job as easily as possible, preferrably with open source tools.</p>
+					<span class="fragment"><p class="box" style="margin-top:100px !important">I'm not a coder! My passion is enabling others to do their job as easily as possible, preferrably with open source tools.</p></span>
+					<span class="fragment"><p class="box" style="margin-top:100px !important">Recently my focus has been on metadata, and I've learnt the following important fact...</p></span>
 					<small class="attribution" style="color:black">Pexel CC0</small>
-					<aside class="notes">I'm not a great coder- I like to find and fix little blockers, for example by making documentation easier to follow or teaching people to use GitHub</aside>
+					<aside class="notes">I like to find and fix little blockers, for example by making documentation easier to follow or teaching people to use GitHub</aside>
 				</section>
 
 				<section data-background-image="./images/files.jpg" alt="files" class="full" data-background-size="cover">
-					<h3 class="box" style="margin-top:100px !important">Metadata is hard</h3>
+					<h3 class="box" style="margin-top:100px !important">Metadata is hard!</h3>
 					<ul>
 					<li class="fragment" style="line-height:250%"><span class="box">It's complex and time-consuming</span></li>
 					<li class="fragment" style="line-height:250%"><span class="box">It's hard to know where to start</span></li>
 					<li class="fragment" style="line-height:250%"><span class="box">There's a steep learning curve</span></li>
 				</ul>
 				<p class="attribution">wikimedia.org CC-BY-3.0</p>
-					<aside class="notes">While people understand the need for metadata, they often don't get any training, and it's an adjunct to their day job</aside>
+					<aside class="notes">While people understand the need for metadata, they often don't get any training, and it's an adjunct to their day job, documentation is very technical and so on and so on...</aside>
 				</section>
 
 				<section data-background-image="./images/manualentry.jpg" alt="manual entry" class="full" data-background-size="cover">
-					<h3 class="box" style="margin-top:100px !important">Manual metadata entry doesn't scale</h3>
-					<p class="box">Solutions that work for tens of datasets don't work so well for thousands</p>
-					<aside class="notes">This leads to problems wit completion, accuracy and currency, and metadata creators don't necessarily know about all the data, or who is responsible for it</aside>
+					<h3 class="box">Manual metadata entry doesn't scale</h3>
+					<p class="box" style="margin-top:50px !important">Solutions that work for tens of datasets don't work so well for thousands</p>
+					<aside class="notes">This leads to problems with completion, accuracy and currency, and metadata creators don't necessarily know about all the data, or who is responsible for it</aside>
 					<p class="attribution">Flickr: US Census Bureau CC BY-ND 2.0</p>
 				</section>
 
 				<section>
-					<h2>Automation</h2>
+					<h2>Automate all the things!</h2>
 				</section>
 
 				<section data-background-image="./images/ford_production_line.jpg" alt="ford production line" class="full" data-background-size="cover">
-					<h3 class="box" style="margin-top:100px !important">Not a new idea!</h3>
+					<h3 class="box" style="margin-top:100px !important">This is not a new idea!</h3>
 					<p class="box">Some metadata elements can be derived from the dataset</p>
 				<p class="attribution">Flickr: The Henry Ford CC BY-NC-SA 2.0</p>
 				<aside class="notes">There are many tools out there that will derive at least some metadata elements for you, including the USGS Metadata Wizard, which has been around for many years</aside>
@@ -102,11 +103,12 @@
 				<section data-background-image="./images/ogrinfo.png" alt="ogrinfo" class="full" data-background-size="cover">
 					<span class="fragment fade-out"><p class="box-right">Most approaches cover the elements that are easy to programatically derive, such as extents, titles, creation or update dates, language and so on</p></span>
 					<span class="fragment fade-in"><p class="box-right">But there are other elements that need a human touch, such as human-readable alternative titles, abstracts and keywords that can't be derived in the same way</p></span>
-					<aside class="notes">From personal observation, it's these manual elements that cause the most trouble and cause metadata projects to flounder or sometimes fail all together</aside>
+					<aside class="notes">From personal observation, it's these manual elements that cause the most trouble and cause metadata projects to flounder or sometimes fail all together. These are increasingly important for data discovery and sharing (eg linked data)</aside>
 				</section>
 
 				<section data-background-image="./images/help.jpeg" alt="help" class="full" data-background-size="cover">
 					<p class="box">We're developing a solution that links together a number of open source technologies to overcome the "manual challenge"</p>
+					<aside class="notes">Some of it is very proof of concept at the moment so I don't have a slick demo</aside>
 				<p class="attribution">https://twitter.com/chloesmithmakes/status/1372999543550324736</p>
 				</section>
 
@@ -117,8 +119,7 @@
 
 
 				<section>
-					<h2 class="box">Part One: Metadata Crawler</h2>
-				</h2>
+					<h3 class="box" style="margin-top:100px !important">Part One: Metadata Crawler</h3>
 				</section>
 
 				<section data-background-image="./images/files.jpg" alt="files" class="full" data-background-size="cover">
@@ -146,7 +147,7 @@
 				</section>
 
 				<section data-background-image="./images/scriptorium.jpg" alt="scribes" class="full" data-background-size="cover">
-					<h2 class="box">Part Two: Ye Olde Approache</h2>
+					<h3 class="box">Part Two: Ye Olde Approache</h3>
 					<p class="attribution">medievalfragments.wordpress.com</p>
 				</section>
 				
@@ -173,6 +174,7 @@
 
 				<section data-background-image="./images/jonny5.jpg" alt="engage guide" class="full" data-background-size="cover">
 					<p class="box-left" style="margin-top:100px !important">With some python machine-learning and natural language processing libraries we can try and extract some useful information from the data</p>
+					<aside class="notes">All the libraries are open source. This is all conceptual at the moment!</aside>
 					<p class="attribution">http://www.popgun80sband.co.uk/blog/top-ten-robots-of-the-80s/</p>
 				</section>
 
@@ -268,10 +270,14 @@
 				progress: true,
 				center: true,
 				hash: true,
+				showNotes: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
+			Reveal.configure({ pdfMaxPagesPerSlide: 1 })
+			Reveal.configure({ pdfSeparateFragments: true });
+			Reveal.configure({ showNotes: true });
 
 		</script>
 
